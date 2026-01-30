@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="600dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Subscription"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/quicksand" />
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textSize="16sp"
+                    android:textColor="#1976D2"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+                <TextView
+                    android:id="@+id/tvCurrentStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current: TRIAL"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Subscription Status Selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Subscription Status"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnTrial"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Trial"
+                        android:textSize="12sp"
+                        android:background="@drawable/subscription_option_active"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnActive"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Premium"
+                        android:textSize="12sp"
+                        android:background="@drawable/subscription_option_inactive"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnExpired"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Expired"
+                        android:textSize="12sp"
+                        android:background="@drawable/subscription_option_inactive"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Premium Type Selection (only visible when Premium is selected) -->
+            <LinearLayout
+                android:id="@+id/layoutPremiumOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Premium Type"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnBasic"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="Basic"
+                        android:textSize="11sp"
+                        android:background="@drawable/premium_type_active"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnStandard"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="Standard"
+                        android:textSize="11sp"
+                        android:background="@drawable/premium_type_inactive"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPremium"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="Premium"
+                        android:textSize="11sp"
+                        android:background="@drawable/premium_type_inactive"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnUltimate"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="Ultimate"
+                        android:textSize="11sp"
+                        android:background="@drawable/premium_type_inactive"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Duration Selection (only visible when Premium is selected) -->
+            <LinearLayout
+                android:id="@+id/layoutDurationOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Duration"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn1Month"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="1 Month"
+                        android:textSize="11sp"
+                        android:background="@drawable/duration_option_active"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn3Months"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="3 Months"
+                        android:textSize="11sp"
+                        android:background="@drawable/duration_option_inactive"
+                        android:textColor="#9C27B0"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn6Months"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="6 Months"
+                        android:textSize="11sp"
+                        android:background="@drawable/duration_option_inactive"
+                        android:textColor="#9C27B0"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn12Months"
+                        android:layout_width="0dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:text="12 Months"
+                        android:textSize="11sp"
+                        android:background="@drawable/duration_option_inactive"
+                        android:textColor="#9C27B0"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Preview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/preview_background"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preview"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvPreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User will have 7 days trial access"
+                    android:textSize="14sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand" />
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:background="@drawable/button_cancel"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginEnd="8dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnApply"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="Apply Changes"
+                    android:background="@drawable/button_primary"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

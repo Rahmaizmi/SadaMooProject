@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="700dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tvDialogTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Disease"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Disease Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#1976D2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDiseaseName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Disease Name (e.g., Lumpy Skin Disease)"
+                    android:inputType="text"
+                    android:fontFamily="@font/quicksand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Scientific Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#1976D2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etScientificName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Scientific Name (e.g., Capripoxvirus)"
+                    android:inputType="text"
+                    android:fontFamily="@font/quicksand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Description -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#1976D2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDiseaseDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Disease Description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:fontFamily="@font/quicksand" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Severity Selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disease Severity"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnMild"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Ringan"
+                        android:textSize="12sp"
+                        android:background="@drawable/severity_button_inactive"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnModerate"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Sedang"
+                        android:textSize="12sp"
+                        android:background="@drawable/severity_button_moderate"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="4dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSevere"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Berat"
+                        android:textSize="12sp"
+                        android:background="@drawable/severity_button_inactive"
+                        android:textColor="#F44336"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Additional Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:boxStrokeColor="#1976D2"
+                    app:hintTextColor="#1976D2"
+                    app:prefixText="Rp ">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEstimatedLoss"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Estimated Loss"
+                        android:inputType="number"
+                        android:fontFamily="@font/quicksand" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:boxStrokeColor="#1976D2"
+                    app:hintTextColor="#1976D2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRecoveryTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Recovery Time"
+                        android:inputType="text"
+                        android:fontFamily="@font/quicksand" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Switches -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Contagious"
+                        android:textSize="14sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchContagious"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        app:thumbTint="#F44336"
+                        app:trackTint="#FFCDD2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Active"
+                        android:textSize="14sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchIsActive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        app:thumbTint="#4CAF50"
+                        app:trackTint="#C8E6C9" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Symptoms Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/disease_section_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Symptoms"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvSymptomsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 symptoms"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <EditText
+                        android:id="@+id/etNewSymptom"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Enter symptom"
+                        android:background="@drawable/list_input_background"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddSymptom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Add"
+                        android:textSize="12sp"
+                        android:background="@drawable/button_add_item"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/list_display_background"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tvSymptomsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No symptoms added"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="2dp" />
+
+                </ScrollView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClearSymptoms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Clear All"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_clear_list"
+                    android:textColor="#F44336"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Causes Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/disease_section_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Causes"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvCausesCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 causes"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <EditText
+                        android:id="@+id/etNewCause"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Enter cause"
+                        android:background="@drawable/list_input_background"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddCause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Add"
+                        android:textSize="12sp"
+                        android:background="@drawable/button_add_item"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/list_display_background"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tvCausesList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No causes added"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="2dp" />
+
+                </ScrollView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClearCauses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Clear All"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_clear_list"
+                    android:textColor="#F44336"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Treatments Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/disease_section_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Treatments"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvTreatmentsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 treatments"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <EditText
+                        android:id="@+id/etNewTreatment"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Enter treatment"
+                        android:background="@drawable/list_input_background"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddTreatment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Add"
+                        android:textSize="12sp"
+                        android:background="@drawable/button_add_item"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/list_display_background"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tvTreatmentsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No treatments added"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="2dp" />
+
+                </ScrollView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClearTreatments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Clear All"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_clear_list"
+                    android:textColor="#F44336"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Prevention Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/disease_section_background"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Prevention"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPreventionCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 methods"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <EditText
+                        android:id="@+id/etNewPrevention"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:hint="Enter prevention method"
+                        android:background="@drawable/list_input_background"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAddPrevention"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Add"
+                        android:textSize="12sp"
+                        android:background="@drawable/button_add_item"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/list_display_background"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tvPreventionList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No prevention methods added"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="2dp" />
+
+                </ScrollView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnClearPrevention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Clear All"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_clear_list"
+                    android:textColor="#F44336"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:background="@drawable/button_cancel"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginEnd="8dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="Save Disease"
+                    android:background="@drawable/button_primary"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

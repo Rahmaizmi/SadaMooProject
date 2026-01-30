@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="700dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/disease_detail_header"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDiseaseName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lumpy Skin Disease"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvScientificName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Capripoxvirus"
+                        android:textSize="14sp"
+                        android:textColor="#E0FFFFFF"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginTop="4dp"
+                        android:fontStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/tvDiseaseStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ACTIVE"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginTop="8dp" />
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_close"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    app:tint="@android:color/white" />
+
+            </LinearLayout>
+
+            <!-- Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/tvDiseaseDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Penyakit kulit menular pada sapi yang disebabkan oleh virus capripox, ditandai dengan benjolan-benjolan pada kulit."
+                    android:textSize="14sp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="4dp" />
+
+                <!-- Disease Info Grid -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/disease_info_background"
+                    android:padding="16dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Disease Information"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Severity Level:"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:fontFamily="@font/quicksand" />
+
+                        <TextView
+                            android:id="@+id/tvSeverity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Berat"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#F44336"
+                            android:fontFamily="@font/quicksand" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Contagious Status:"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:fontFamily="@font/quicksand" />
+
+                        <TextView
+                            android:id="@+id/tvContagious"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Menular"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#F44336"
+                            android:fontFamily="@font/quicksand" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Recovery Time:"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:fontFamily="@font/quicksand" />
+
+                        <TextView
+                            android:id="@+id/tvRecoveryTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2-4 minggu"
+                            android:textSize="14sp"
+                            android:textColor="#424242"
+                            android:fontFamily="@font/quicksand" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Estimated Loss:"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:fontFamily="@font/quicksand" />
+
+                        <TextView
+                            android:id="@+id/tvEstimatedLoss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 15.000.000"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#F44336"
+                            android:fontFamily="@font/quicksand" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Detection Count:"
+                            android:textSize="14sp"
+                            android:textColor="#757575"
+                            android:fontFamily="@font/quicksand" />
+
+                        <TextView
+                            android:id="@+id/tvDetectionCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 times detected"
+                            android:textSize="14sp"
+                            android:textColor="#1976D2"
+                            android:fontFamily="@font/quicksand" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Symptoms -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/symptoms_detail_background"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Symptoms"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#F44336"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvSymptomsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="✓ Benjolan keras pada kulit\n✓ Demam tinggi (40-41°C)"
+                        android:textSize="13sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+                <!-- Causes -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/causes_detail_background"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Causes"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF9800"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvCausesList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="• Virus Capripox\n• Penularan melalui serangga"
+                        android:textSize="13sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+                <!-- Treatments -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/treatments_detail_background"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Treatments"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvTreatmentsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="⚕ Isolasi hewan yang terinfeksi\n⚕ Pemberian antibiotik untuk mencegah infeksi sekunder\n⚕ Perawatan luka dengan antiseptik"
+                        android:textSize="13sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+                <!-- Prevention -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/prevention_detail_background"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prevention"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvPreventionList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🛡 Vaksinasi rutin\n🛡 Kontrol serangga vektor\n🛡 Karantina hewan baru\n🛡 Sanitasi kandang yang baik"
+                        android:textSize="13sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+                <!-- Timestamps -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/timestamps_detail_background"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Record Information"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#607D8B"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvCreatedDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Created: 15 October 2024, 14:30"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvUpdatedDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last updated: 27 October 2024, 09:15"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="600dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Package Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/quicksand" />
+
+                <ImageButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_close"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    app:tint="#757575" />
+
+            </LinearLayout>
+
+            <!-- Package Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPackageName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Premium Package"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPackageDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6 months"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPackageStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACTIVE"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:background="@drawable/package_status_active" />
+
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvPackageDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Best for large farms with comprehensive needs and advanced monitoring requirements."
+                android:textSize="14sp"
+                android:textColor="#424242"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginBottom="20dp"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Pricing Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/pricing_info_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pricing Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Package Price:"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPackagePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 120.000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Price per Month:"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPricePerMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="~Rp 20.000/month"
+                        android:textSize="14sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Subscriber Stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/subscriber_stats_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subscriber Statistics"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF9800"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvSubscriberCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="32 active subscribers"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvEstimatedRevenue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated revenue: Rp 3.840.000"
+                    android:textSize="14sp"
+                    android:textColor="#4CAF50"
+                    android:fontFamily="@font/quicksand" />
+
+            </LinearLayout>
+
+            <!-- Features -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/features_detail_background"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Package Features"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#9C27B0"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvFeaturesList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="✓ Unlimited scans\n✓ AI-powered detection\n✓ 24/7 chat support"
+                    android:textSize="14sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:lineSpacingExtra="4dp" />
+
+            </LinearLayout>
+
+            <!-- Timestamps -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/timestamps_background"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Package Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#607D8B"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCreatedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Created: 15 October 2024, 14:30"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvUpdatedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last updated: 27 October 2024, 09:15"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

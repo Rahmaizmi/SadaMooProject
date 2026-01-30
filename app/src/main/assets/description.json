@@ -1,0 +1,32 @@
+[
+  {
+    "nama": "Brangus",
+    "nama_latin": "Bos taurus (Aberdeen Angus)",
+    "deskripsi": "Sapi potong asal Skotlandia yang terkenal dengan daging berkualitas tinggi, berwarna hitam polos dan tidak bertanduk.",
+    "status_kesehatan": "Sapi Anda Sehat"
+  },
+  {
+    "nama": "Limosin",
+    "nama_latin": "Bos taurus (Limousin)",
+    "deskripsi": "Sapi potong unggul asal Prancis dengan otot besar, pertumbuhan cepat, dan efisiensi pakan tinggi.",
+    "status_kesehatan": "Sapi Anda Sehat"
+  },
+  {
+    "nama": "Pasundan",
+    "nama_latin": "Bos indicus (Sapi Pasundan)",
+    "deskripsi": "Sapi lokal Jawa Barat yang adaptif terhadap lingkungan tropis, tahan penyakit, dan produktivitas cukup baik.",
+    "status_kesehatan": "Sapi Anda Sehat"
+  },
+  {
+    "nama": "Ongole",
+    "nama_latin": "Bos indicus (PO)",
+    "deskripsi": "Sapi hasil persilangan Ongole dari India dengan sapi lokal Indonesia, bertubuh besar dan adaptif di iklim tropis.",
+    "status_kesehatan": "Sapi Anda Sehat"
+  },
+  {
+    "nama": "Simental",
+    "nama_latin": "Bos taurus (Simmental)",
+    "deskripsi": "Sapi potong dan perah dari Swiss dengan tubuh besar, cepat tumbuh, dan produktivitas tinggi.",
+    "status_kesehatan": "Sapi Anda Sehat"
+  }
+]

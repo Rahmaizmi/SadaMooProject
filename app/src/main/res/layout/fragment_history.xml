@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Riwayat Kegiatan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:fontFamily="@font/quicksand"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Search Bar -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="#B0B0B0"
+                    android:layout_marginEnd="12dp" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Cari riwayat scan atau konsultasi..."
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/quicksand" />
+
+                <ImageView
+                    android:id="@+id/ivFilter"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_filter"
+                    app:tint="#4A90E2"
+                    android:layout_marginStart="8dp"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Filter Tabs -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFilterAll"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="Semua"
+                android:textSize="12sp"
+                android:background="@drawable/filter_button_active"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginEnd="4dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFilterScan"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="Scan"
+                android:textSize="12sp"
+                android:background="@drawable/filter_button_inactive"
+                android:textColor="#4A90E2"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginEnd="4dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFilterConsultation"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:text="Konsultasi"
+                android:textSize="12sp"
+                android:background="@drawable/filter_button_inactive"
+                android:textColor="#4A90E2"
+                android:fontFamily="@font/quicksand" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- History List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Empty State -->
+    <LinearLayout
+        android:id="@+id/layoutEmptyState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_empty_history"
+            app:tint="#80FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum Ada Riwayat"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/quicksand"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mulai scan sapi untuk melihat riwayat di sini"
+            android:textSize="14sp"
+            android:textColor="#80FFFFFF"
+            android:fontFamily="@font/quicksand"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

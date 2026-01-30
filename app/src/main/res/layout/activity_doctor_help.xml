@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chat_background">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue_primary"
+        android:elevation="4dp"
+        app:title="Bantuan dan FAQ"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Content ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- FAQ Section Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pertanyaan yang Sering Ditanyakan"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_primary"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- FAQ Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <!-- FAQ 1 -->
+                    <LinearLayout
+                        android:id="@+id/faq1Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bagaimana cara merespon konsultasi?"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_primary"
+                            android:fontFamily="@font/quicksand"/>
+
+                        <TextView
+                            android:id="@+id/faq1Arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▼"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/faq1Content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:paddingTop="0dp"
+                        android:text="Buka menu Konsultasi, pilih percakapan yang ingin dibalas, lalu ketik pesan Anda di kolom chat yang tersedia."
+                        android:textSize="13sp"
+                        android:textColor="@color/darker_gray"
+                        android:fontFamily="@font/quicksand"
+                        android:visibility="gone"/>
+
+                    <View style="@style/Divider"/>
+
+                    <!-- FAQ 2 -->
+                    <LinearLayout
+                        android:id="@+id/faq2Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bagaimana cara mengubah profil saya?"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_primary"
+                            android:fontFamily="@font/quicksand"/>
+
+                        <TextView
+                            android:id="@+id/faq2Arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▼"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/faq2Content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:paddingTop="0dp"
+                        android:text="Buka menu Profil, klik 'Edit Profil', lalu ubah informasi yang diperlukan dan simpan perubahan."
+                        android:textSize="13sp"
+                        android:textColor="@color/darker_gray"
+                        android:fontFamily="@font/quicksand"
+                        android:visibility="gone"/>
+
+                    <View style="@style/Divider"/>
+
+                    <!-- FAQ 3 -->
+                    <LinearLayout
+                        android:id="@+id/faq3Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Apakah saya bisa mengubah email?"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_primary"
+                            android:fontFamily="@font/quicksand"/>
+
+                        <TextView
+                            android:id="@+id/faq3Arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▼"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/faq3Content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:paddingTop="0dp"
+                        android:text="Email tidak dapat diubah secara langsung. Jika perlu mengubah email, silakan hubungi admin melalui tombol kontak di bawah."
+                        android:textSize="13sp"
+                        android:textColor="@color/darker_gray"
+                        android:fontFamily="@font/quicksand"
+                        android:visibility="gone"/>
+
+                    <View style="@style/Divider"/>
+
+                    <!-- FAQ 4 -->
+                    <LinearLayout
+                        android:id="@+id/faq4Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bagaimana cara mengatasi notifikasi yang tidak muncul?"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_primary"
+                            android:fontFamily="@font/quicksand"/>
+
+                        <TextView
+                            android:id="@+id/faq4Arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▼"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/faq4Content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:paddingTop="0dp"
+                        android:text="Pastikan notifikasi sudah diaktifkan di Pengaturan aplikasi dan pengaturan sistem perangkat Anda."
+                        android:textSize="13sp"
+                        android:textColor="@color/darker_gray"
+                        android:fontFamily="@font/quicksand"
+                        android:visibility="gone"/>
+
+                    <View style="@style/Divider"/>
+
+                    <!-- FAQ 5 -->
+                    <LinearLayout
+                        android:id="@+id/faq5Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp"
+                        android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bagaimana cara mengubah foto profil?"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue_primary"
+                            android:fontFamily="@font/quicksand"/>
+
+                        <TextView
+                            android:id="@+id/faq5Arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="▼"
+                            android:textColor="@color/blue_primary"
+                            android:textSize="12sp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/faq5Content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:paddingTop="0dp"
+                        android:text="Buka menu Profil, klik tombol kamera pada foto profil, lalu pilih foto baru dari galeri atau ambil foto baru."
+                        android:textSize="13sp"
+                        android:textColor="@color/darker_gray"
+                        android:fontFamily="@font/quicksand"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Contact Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Butuh Bantuan Lebih Lanjut?"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_primary"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Email Support Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEmailSupport"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:text="Hubungi via Email"
+                android:textSize="15sp"
+                android:fontFamily="@font/quicksand"
+                android:textColor="@color/blue_primary"
+                app:strokeColor="@color/blue_primary"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_email"
+                app:iconTint="@color/blue_primary" />
+
+            <!-- WhatsApp Support Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWhatsappSupport"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Hubungi via WhatsApp"
+                android:textSize="15sp"
+                android:fontFamily="@font/quicksand"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#25D366"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_whatsapp"
+                app:iconTint="@android:color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

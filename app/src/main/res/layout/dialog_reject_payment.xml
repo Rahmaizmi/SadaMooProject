@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="600dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❌ Reject Payment"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Warning Notice -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/warning_notice_background"
+                android:padding="12dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_warning"
+                    android:layout_marginEnd="8dp"
+                    app:tint="#FF9800" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="This action will permanently reject the payment and notify the user. Please ensure you have reviewed the payment proof carefully."
+                    android:textSize="12sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <!-- Payment Information -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/payment_reject_info_background"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#F44336"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment Code:"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPaymentCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SADA123456"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Customer:"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahmad Santoso"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Package and Amount:"
+                        android:textSize="14sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPackageInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Premium - Rp 122.500"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Rejection Reasons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rejection_reasons_background"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Rejection Reason"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#F44336"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Common Rejection Reasons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReasonInvalid"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="❌ Bukti pembayaran tidak valid"
+                        android:textSize="12sp"
+                        android:background="@drawable/reason_button_active"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReasonIncomplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="📋 Informasi pembayaran tidak lengkap"
+                        android:textSize="12sp"
+                        android:background="@drawable/reason_button_inactive"
+                        android:textColor="#F44336"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReasonAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="💰 Jumlah pembayaran tidak sesuai"
+                        android:textSize="12sp"
+                        android:background="@drawable/reason_button_inactive"
+                        android:textColor="#F44336"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReasonFake"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="🚫 Bukti pembayaran palsu/manipulasi"
+                        android:textSize="12sp"
+                        android:background="@drawable/reason_button_inactive"
+                        android:textColor="#F44336"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReasonExpired"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="⏰ Bukti pembayaran sudah kadaluarsa"
+                        android:textSize="12sp"
+                        android:background="@drawable/reason_button_inactive"
+                        android:textColor="#F44336"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReasonOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="✏️ Alasan lainnya (tulis manual)"
+                        android:textSize="12sp"
+                        android:background="@drawable/reason_button_inactive"
+                        android:textColor="#F44336"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="12dp"
+                        android:gravity="start|center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp" />
+
+                    <!-- Custom Reason Input -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxStrokeColor="#F44336"
+                        app:hintTextColor="#F44336">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCustomReason"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Enter custom rejection reason..."
+                            android:inputType="textMultiLine"
+                            android:maxLines="3"
+                            android:fontFamily="@font/quicksand"
+                            android:visibility="gone" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Impact Notice -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/impact_notice_background"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ℹ️ What happens after rejection:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• User will receive rejection notification\n• Payment status will be marked as 'Rejected'\n• User can resubmit with correct payment proof\n• Subscription will remain inactive\n• Admin notes will be recorded for audit"
+                    android:textSize="12sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:background="@drawable/button_cancel"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginEnd="8dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRejectPayment"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="2"
+                    android:text="❌ Reject Payment"
+                    android:background="@drawable/button_reject_payment"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

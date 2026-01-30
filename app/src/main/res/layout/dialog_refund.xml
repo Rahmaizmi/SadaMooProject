@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="700dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💸 Process Refund"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/quicksand" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refund payment to customer"
+                    android:textSize="14sp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Payment Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/payment_info_section"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment ID:"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPaymentId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PAY000001"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Customer:"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ahmad Santoso"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Package:"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPackageType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Premium"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Original Amount:"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvOriginalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 120.000"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment Date:"
+                        android:textSize="12sp"
+                        android:textColor="#757575"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPaymentDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27 Oct 2024"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Refund Type Selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Type"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnFullRefund"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Full Refund"
+                        android:textSize="12sp"
+                        android:background="@drawable/refund_type_active"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="8dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPartialRefund"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Partial Refund"
+                        android:textSize="12sp"
+                        android:background="@drawable/refund_type_inactive"
+                        android:textColor="#FF5722"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Refund Amount -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Amount"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp"
+                        android:textSize="16sp"
+                        android:textColor="#424242"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginEnd="8dp" />
+
+                    <EditText
+                        android:id="@+id/etRefundAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:hint="Enter refund amount"
+                        android:inputType="number"
+                        android:background="@drawable/refund_amount_input"
+                        android:padding="12dp"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/quicksand"
+                        android:enabled="false" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvMaxRefund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Max: Rp 120.000"
+                    android:textSize="11sp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+            <!-- Refund Reason -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Reason"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnReasonRequest"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:text="User Request"
+                            android:textSize="11sp"
+                            android:background="@drawable/reason_button_inactive"
+                            android:textColor="#1976D2"
+                            android:fontFamily="@font/quicksand"
+                            android:layout_marginEnd="4dp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnReasonTechnical"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:text="Technical Issue"
+                            android:textSize="11sp"
+                            android:background="@drawable/reason_button_inactive"
+                            android:textColor="#1976D2"
+                            android:fontFamily="@font/quicksand" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnReasonDuplicate"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:text="Duplicate Payment"
+                            android:textSize="11sp"
+                            android:background="@drawable/reason_button_inactive"
+                            android:textColor="#1976D2"
+                            android:fontFamily="@font/quicksand"
+                            android:layout_marginEnd="4dp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnReasonFraud"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:text="Fraud"
+                            android:textSize="11sp"
+                            android:background="@drawable/reason_button_inactive"
+                            android:textColor="#1976D2"
+                            android:fontFamily="@font/quicksand" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnReasonOther"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:text="Other (Specify below)"
+                        android:textSize="12sp"
+                        android:background="@drawable/reason_button_inactive"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginBottom="8dp" />
+
+                    <EditText
+                        android:id="@+id/etCustomReason"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Enter custom reason..."
+                        android:background="@drawable/custom_reason_input"
+                        android:padding="12dp"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/quicksand"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Refund Preview -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/refund_preview_background"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refund Preview"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF5722"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvRefundPreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select refund options above"
+                    android:textSize="12sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:background="@drawable/button_cancel"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginEnd="8dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnProcessRefund"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:text="Process Refund"
+                    android:background="@drawable/button_refund_process"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Package Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/package_header_background"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPackageName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Premium Package"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand" />
+
+                <TextView
+                    android:id="@+id/tvPackageDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6 months"
+                    android:textSize="12sp"
+                    android:textColor="#E0FFFFFF"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPackageStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ACTIVE"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/package_status_active"
+                android:padding="6dp" />
+
+        </LinearLayout>
+
+        <!-- Package Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvPackageDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Best for large farms with comprehensive needs and advanced monitoring requirements."
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingExtra="2dp" />
+
+            <!-- Price Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPackagePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 120.000"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:textColor="#4CAF50"
+                        android:fontFamily="@font/quicksand" />
+
+                    <TextView
+                        android:id="@+id/tvPricePerMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="~Rp 20.000/month"
+                        android:textSize="12sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="@font/quicksand" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/tvSubscriberCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="32 subscribers"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1976D2"
+                        android:fontFamily="@font/quicksand"
+                        android:drawableStart="@drawable/ic_subscribers"
+                        android:drawablePadding="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvLastUpdated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Updated: 27 Oct 2024"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="@font/quicksand"
+                        android:layout_marginTop="2dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Features -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/features_background"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Package Features"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="#1976D2"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvFeatures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Unlimited scans\n• AI-powered detection\n• 24/7 chat support\n• +3 more features"
+                    android:textSize="12sp"
+                    android:textColor="#424242"
+                    android:fontFamily="@font/quicksand"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEditPackage"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="Edit"
+                    android:textSize="12sp"
+                    android:background="@drawable/button_edit_package"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginEnd="4dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnToggleStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="Deactivate"
+                    android:textSize="12sp"
+                    android:background="@drawable/button_deactivate"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginEnd="4dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDeletePackage"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:text="Delete"
+                    android:textSize="12sp"
+                    android:background="@drawable/button_delete_package"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/quicksand" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1041426976490",
+    "project_id": "sada-moo-caa83",
+    "storage_bucket": "sada-moo-caa83.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041426976490:android:9f431652503efea25b1193",
+        "android_client_info": {
+          "package_name": "com.example.sadamoo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARUNfE9OqK3KVWJxb1t0wWI1RqKFThAt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

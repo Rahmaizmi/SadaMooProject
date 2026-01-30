@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardStatus"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Payment Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvPaymentCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SADA123456"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/quicksand" />
+
+                <TextView
+                    android:id="@+id/tvPackageInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paket Premium - 6 Bulan"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:fontFamily="@font/quicksand"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menunggu Verifikasi"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/status_badge_background"
+                android:padding="6dp" />
+
+        </LinearLayout>
+
+        <!-- Amount -->
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 122.500"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:fontFamily="@font/quicksand"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Notes -->
+        <TextView
+            android:id="@+id/tvNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menunggu verifikasi admin (1x24 jam)"
+            android:textSize="12sp"
+            android:textColor="#757575"
+            android:fontFamily="@font/quicksand"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Dates -->
+        <TextView
+            android:id="@+id/tvSubmittedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dikirim: 27 Oct 2024, 14:30"
+            android:textSize="11sp"
+            android:textColor="#9E9E9E"
+            android:fontFamily="@font/quicksand" />
+
+        <TextView
+            android:id="@+id/tvVerifiedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diverifikasi: 27 Oct 2024, 15:45"
+            android:textSize="11sp"
+            android:textColor="#4CAF50"
+            android:fontFamily="@font/quicksand"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

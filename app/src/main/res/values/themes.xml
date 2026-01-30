@@ -1,0 +1,151 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.SadaMoo" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="colorSecondary">@color/green_accent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.SadaMoo" parent="Base.Theme.SadaMoo" />
+
+    <!-- ========== TEXT STYLES ========== -->
+
+    <!-- Style untuk Welcome Text / Judul Utama -->
+    <style name="WelcomeText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/blue_primary</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <!-- Style untuk Section Title -->
+    <style name="SectionTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <!-- Style untuk Body Text -->
+    <style name="BodyText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+    </style>
+
+    <!-- Style untuk Description Text -->
+    <style name="DescriptionText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <!-- Style untuk Feature Text -->
+    <style name="FeatureText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/quicksand</item>
+    </style>
+
+    <!-- Style untuk Navigation Label -->
+    <style name="NavLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+    <!-- Style untuk Navigation Label Active -->
+    <style name="NavLabelActive" parent="NavLabel">
+        <item name="android:textColor">@color/nav_active</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style untuk Navigation Label Inactive -->
+    <style name="NavLabelInactive" parent="NavLabel">
+        <item name="android:textColor">@color/nav_inactive</item>
+    </style>
+
+    <!-- ========== CARD STYLES ========== -->
+
+    <!-- Style untuk Card Container -->
+    <style name="CardContainer">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Style untuk ViewPager Card -->
+    <style name="ViewPagerCard">
+        <item name="android:background">@drawable/bg_viewpager</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+    <!-- ========== BUTTON STYLES ========== -->
+
+    <!-- Style untuk Primary Button -->
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/blue_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:padding">12dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Style untuk Secondary Button -->
+    <style name="SecondaryButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/blue_primary</item>
+        <item name="strokeColor">@color/blue_primary</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/quicksand</item>
+        <item name="android:padding">12dp</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- ========== LAYOUT STYLES ========== -->
+
+    <!-- Style untuk Feature Item Container -->
+    <style name="FeatureItemContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <!-- Style untuk ScrollView Content -->
+    <style name="ScrollViewContent">
+        <item name="android:padding">16dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+
+    <!-- ========== IMAGE STYLES ========== -->
+
+    <!-- Style untuk Feature Icon -->
+    <style name="FeatureIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+    </style>
+
+    <!-- Style untuk Navigation Icon -->
+    <style name="NavIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    android:backgroundTint="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Image Container with Border -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/ivDiseaseImage"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/logo_sapi"
+                android:scaleType="centerCrop" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Content Section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Disease Name -->
+            <TextView
+                android:id="@+id/tvDiseaseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penyakit Mulut dan Kuku (PMK)"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:fontFamily="@font/quicksand"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tvDiseaseDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penyakit virus akut yang sangat menular..."
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:fontFamily="@font/quicksand"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Badges Container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Severity Badge -->
+                <TextView
+                    android:id="@+id/tvSeverity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berat"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/severity_badge"
+                    android:fontFamily="@font/quicksand"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- Contagious Badge -->
+                <TextView
+                    android:id="@+id/tvContagious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menular"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/contagious_badge"
+                    android:fontFamily="@font/quicksand"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

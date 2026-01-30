@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="140dp"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#1E3A8A"
+        android:padding="8dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivCattle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo_sapi"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvCattleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brahman"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/quicksand"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

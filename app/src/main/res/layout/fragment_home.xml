@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Main Content ScrollView -->
+    <ScrollView
+        style="@style/ScrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Welcome Text dengan Style -->
+            <TextView
+                android:id="@+id/tvWelcome"
+                style="@style/WelcomeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang!" />
+
+            <!-- ViewPager2 Container dengan Card Style -->
+            <FrameLayout
+                style="@style/ViewPagerCard"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerSapi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp" />
+
+            </FrameLayout>
+
+            <!-- Card untuk Deskripsi Aplikasi -->
+            <LinearLayout
+                style="@style/CardContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/DescriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sada Moo adalah aplikasi pendukung peternak yang menyediakan informasi dan membantu pemantauan kesehatan sapi dalam satu aplikasi!" />
+
+            </LinearLayout>
+
+            <!-- Section Title untuk Features -->
+            <TextView
+                style="@style/SectionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Fitur Unggulan" />
+
+            <!-- Card untuk Features List -->
+            <LinearLayout
+                style="@style/CardContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Feature 1 -->
+                <LinearLayout style="@style/FeatureItemContainer">
+
+                    <ImageView
+                        style="@style/FeatureIcon"
+                        android:src="@drawable/ic_check_green" />
+
+                    <TextView
+                        style="@style/FeatureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scan &amp; Deteksi Penyakit Sapi" />
+
+                </LinearLayout>
+
+                <!-- Feature 2 -->
+                <LinearLayout style="@style/FeatureItemContainer">
+
+                    <ImageView
+                        style="@style/FeatureIcon"
+                        android:src="@drawable/ic_check_green" />
+
+                    <TextView
+                        style="@style/FeatureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pelajari Penyakit &amp; Solusinya" />
+
+                </LinearLayout>
+
+                <!-- Feature 3 -->
+                <LinearLayout style="@style/FeatureItemContainer">
+
+                    <ImageView
+                        style="@style/FeatureIcon"
+                        android:src="@drawable/ic_check_green" />
+
+                    <TextView
+                        style="@style/FeatureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pantau Kesehatan Sapi" />
+
+                </LinearLayout>
+
+                <!-- Feature 4 -->
+                <LinearLayout style="@style/FeatureItemContainer">
+
+                    <ImageView
+                        style="@style/FeatureIcon"
+                        android:src="@drawable/ic_check_green" />
+
+                    <TextView
+                        style="@style/FeatureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dapatkan Tips Perawatan" />
+
+                </LinearLayout>
+
+                <!-- Feature 5 -->
+                <LinearLayout style="@style/FeatureItemContainer">
+
+                    <ImageView
+                        style="@style/FeatureIcon"
+                        android:src="@drawable/ic_check_green" />
+
+                    <TextView
+                        style="@style/FeatureText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Konsultasi dengan Dokter Hewan" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Spacer untuk Bottom Navigation -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
